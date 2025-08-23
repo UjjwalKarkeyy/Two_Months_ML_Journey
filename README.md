@@ -23,7 +23,7 @@ My journey begins with refreshing core skills to ensure a strong foundation for 
 
 ---
 
-## Current Focus: Prerequisite Revision [**Status**: <span style = "color:orange">Ongoing</span>]
+  ## Current Focus: Prerequisite Revision [**Status**: 🟡 Ongoing]
 I’m starting by revisiting foundational skills to ensure I’m ready for project-based learning. This phase (2-3 days) focuses on strengthening my Python, data handling, and ML basics, preparing me for EDA-heavy projects like **Titanic Survival Prediction** and **Crop Disease Detection**.
 ### Skills Being Revised
 - **Python**: Variables, loops, functions, list comprehensions, error handling.  
@@ -46,7 +46,7 @@ I’m starting by revisiting foundational skills to ensure I’m ready for proje
 ## Planned Projects
 Below are the projects I’ll tackle after prerequisites, each designed to build specific ML skills and showcase progress. I’ll update this section with new projects, EDA insights, and deployment links as I complete them.
 
-### 1. Titanic Survival Prediction (Classification) [**Status**: Pending]
+### 1. Titanic Survival Prediction (Classification) [**Status**: 🔴 Pending]
 - **Dataset**: Titanic (Kaggle, ~891 samples)  
 - **Objective**: Predict passenger survival based on features like age, gender, and class.  
 - **Skills to Learn**:
@@ -58,7 +58,7 @@ Below are the projects I’ll tackle after prerequisites, each designed to build
 
 ---
 
-### 2. Boston Housing Price Prediction (Regression) [**Status**: Pending]
+### 2. Boston Housing Price Prediction (Regression) [**Status**: 🔴 Pending]
 - **Dataset**: Boston Housing (scikit-learn, 506 samples)  
 - **Objective**: Predict house prices based on features like number of rooms and crime rate.  
 - **Skills to Learn**:
@@ -70,7 +70,7 @@ Below are the projects I’ll tackle after prerequisites, each designed to build
 
 ---
 
-### 3. Wine Quality Prediction (Multiclass Classification) [**Status**: Pending]
+### 3. Wine Quality Prediction (Multiclass Classification) [**Status**: 🔴 Pending]
 - **Dataset**: Wine Quality (UCI/Kaggle, ~4,800 samples)  
 - **Objective**: Predict wine quality based on chemical properties (e.g., pH, alcohol).  
 - **Skills to Learn**:
@@ -82,7 +82,7 @@ Below are the projects I’ll tackle after prerequisites, each designed to build
 
 ---
 
-### 4. Crop Disease Detection (Computer Vision) [**Status**: Pending]
+### 4. Crop Disease Detection (Computer Vision) [**Status**: 🔴 Pending]
 - **Dataset**: PlantVillage (Kaggle, ~50,000 images)  
 - **Objective**: Classify crop images as healthy or diseased (e.g., rice, maize).  
 - **Skills to Learn**:
@@ -94,7 +94,7 @@ Below are the projects I’ll tackle after prerequisites, each designed to build
 
 ---
 
-### 5. Customer Support Chatbot (NLP) [**Status**: Pending]
+### 5. Customer Support Chatbot (NLP) [**Status**: 🔴 Pending]
 - **Dataset**: Customer Support on Twitter (Kaggle) or synthetic Nepali Q&A data  
 - **Objective**: Build a chatbot for automated customer responses.  
 - **Skills to Learn**:
