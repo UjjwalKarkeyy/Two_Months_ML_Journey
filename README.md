@@ -1,4 +1,5 @@
 # Two Months ML Journey: Building Confidence for a Career in Machine Learning
+# [Day: 1]
 
 ## Welcome to My Journey
 This repository chronicles my **2-month project-based learning journey** to build the skills and confidence needed to become a Junior Machine Learning (ML) Engineer.  
@@ -53,7 +54,7 @@ Below are the projects I’ll tackle after prerequisites, each designed to build
   - Models: Logistic Regression, Decision Trees, Random Forests.  
   - Evaluation: Accuracy, precision, recall, confusion matrix.  
 - **Nepal Relevance**: Classification skills for healthcare (e.g., NAAMII’s disease prediction).  
-- **Next Steps**: Deploy as a Streamlit app.  
+- **Next Steps**: Deploy as a Streamlit app. 
 
 ---
 
