@@ -22,9 +22,8 @@ My journey begins with refreshing core skills to ensure a strong foundation for 
 
 ---
 
-## Current Focus: Prerequisite Revision
+## Current Focus: Prerequisite Revision [**Status**: Ongoing]
 I’m starting by revisiting foundational skills to ensure I’m ready for project-based learning. This phase (2-3 days) focuses on strengthening my Python, data handling, and ML basics, preparing me for EDA-heavy projects like **Titanic Survival Prediction** and **Crop Disease Detection**.
-- **Status**: Ongoing
 ### Skills Being Revised
 - **Python**: Variables, loops, functions, list comprehensions, error handling.  
 - **Data Handling**: Pandas (filtering, grouping, handling missing values), NumPy (array operations).  
@@ -46,66 +45,61 @@ I’m starting by revisiting foundational skills to ensure I’m ready for proje
 ## Planned Projects
 Below are the projects I’ll tackle after prerequisites, each designed to build specific ML skills and showcase progress. I’ll update this section with new projects, EDA insights, and deployment links as I complete them.
 
-### 1. Titanic Survival Prediction (Classification)
+### 1. Titanic Survival Prediction (Classification) [**Status**: Pending]
 - **Dataset**: Titanic (Kaggle, ~891 samples)  
 - **Objective**: Predict passenger survival based on features like age, gender, and class.  
 - **Skills to Learn**:
   - EDA: Visualize survival rates, handle missing values, encode categoricals.  
   - Models: Logistic Regression, Decision Trees, Random Forests.  
   - Evaluation: Accuracy, precision, recall, confusion matrix.  
-- **Status**: Planned (Week 1-2). Notebook: `titanic_survival_prediction.ipynb`  
 - **Nepal Relevance**: Classification skills for healthcare (e.g., NAAMII’s disease prediction).  
 - **Next Steps**: Deploy as a Streamlit app.  
 
 ---
 
-### 2. Boston Housing Price Prediction (Regression)
+### 2. Boston Housing Price Prediction (Regression) [**Status**: Pending]
 - **Dataset**: Boston Housing (scikit-learn, 506 samples)  
 - **Objective**: Predict house prices based on features like number of rooms and crime rate.  
 - **Skills to Learn**:
   - EDA: Scatter plots, correlation heatmaps, feature scaling.  
   - Models: Linear Regression, Random Forests.  
   - Evaluation: MSE, R² score.  
-- **Status**: Planned (Week 2). Notebook: `boston_housing_prediction.ipynb`  
 - **Nepal Relevance**: Regression for fintech or real estate analytics (e.g., Fusemachines’ solutions).  
 - **Next Steps**: Add feature selection and deploy.  
 
 ---
 
-### 3. Wine Quality Prediction (Multiclass Classification)
+### 3. Wine Quality Prediction (Multiclass Classification) [**Status**: Pending]
 - **Dataset**: Wine Quality (UCI/Kaggle, ~4,800 samples)  
 - **Objective**: Predict wine quality based on chemical properties (e.g., pH, alcohol).  
 - **Skills to Learn**:
   - EDA: Box plots, class distribution analysis, handling imbalanced data.  
   - Models: k-Nearest Neighbors, SVM, Neural Networks (Keras).  
   - Evaluation: F1-score, accuracy.  
-- **Status**: Planned (Week 3). Notebook: `wine_quality_prediction.ipynb`  
 - **Nepal Relevance**: Quality prediction for agriculture (e.g., tea quality in Nepal).  
 - **Next Steps**: Experiment with PCA and deploy.  
 
 ---
 
-### 4. Crop Disease Detection (Computer Vision)
+### 4. Crop Disease Detection (Computer Vision) [**Status**: Pending]
 - **Dataset**: PlantVillage (Kaggle, ~50,000 images)  
 - **Objective**: Classify crop images as healthy or diseased (e.g., rice, maize).  
 - **Skills to Learn**:
   - EDA: Image visualizations, class balance analysis, data augmentation.  
   - Models: CNNs, Transfer Learning (MobileNet).  
   - Evaluation: Accuracy, precision/recall.  
-- **Status**: Planned (Week 4). Notebook: `crop_disease_detection.ipynb`  
 - **Nepal Relevance**: Supports Nepal’s agriculture sector (e.g., NAAMII’s vegetable disease detection).  
 - **Next Steps**: Deploy as a mobile-friendly web app for farmers.  
 
 ---
 
-### 5. Customer Support Chatbot (NLP)
+### 5. Customer Support Chatbot (NLP) [**Status**: Pending]
 - **Dataset**: Customer Support on Twitter (Kaggle) or synthetic Nepali Q&A data  
 - **Objective**: Build a chatbot for automated customer responses.  
 - **Skills to Learn**:
   - EDA: Word clouds, n-gram analysis, text preprocessing (tokenization, TF-IDF).  
   - Models: Rule-based or seq2seq (TensorFlow), Hugging Face transformers.  
   - Evaluation: BLEU score, response accuracy.  
-- **Status**: Planned (Week 5-6). Notebook: `chatbot_nlp.ipynb`  
 - **Nepal Relevance**: NLP for local businesses or Nepali language processing (e.g., Paaila Technology).  
 - **Next Steps**: Deploy as a web-based chatbot.  
 
