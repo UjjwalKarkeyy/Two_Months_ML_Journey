@@ -9,7 +9,7 @@ to myself and future employers, especially at **Nepali AI/ML companies** like *F
 the industry.
 
 This README is a living document, updated regularly as I progress through prerequisite revision, complete projects, and achieve milestones. Each project emphasizes **Exploratory Data Analysis (EDA)** to 
-uncover data insights, followed by model building, evaluation, and deployment—mirroring real-world ML workflows.  
+uncover data insights, followed by model building, evaluation, and deployment, mirroring real-world ML workflows.  
 
 My journey begins with refreshing core skills to ensure a strong foundation for the exciting projects ahead.
 
@@ -149,7 +149,7 @@ curiosity and determination.
 ## How to Use This Repository
 - Explore project notebooks for detailed EDA, code, and results.  
 - Check READMEs in each project folder for insights and Nepal-specific applications.  
-- Feel free to fork or suggest improvements—I’m always learning!  
+- Feel free to fork or suggest improvements, I’m always learning!  
 
 ---
 
