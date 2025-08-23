@@ -23,7 +23,7 @@ My journey begins with refreshing core skills to ensure a strong foundation for 
 
 ---
 
-## Current Focus: Prerequisite Revision [**Status**: Ongoing]
+## Current Focus: Prerequisite Revision [**Status**: <span style = "color:orange">Ongoing</span>]
 I’m starting by revisiting foundational skills to ensure I’m ready for project-based learning. This phase (2-3 days) focuses on strengthening my Python, data handling, and ML basics, preparing me for EDA-heavy projects like **Titanic Survival Prediction** and **Crop Disease Detection**.
 ### Skills Being Revised
 - **Python**: Variables, loops, functions, list comprehensions, error handling.  
