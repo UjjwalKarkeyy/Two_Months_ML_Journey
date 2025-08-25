@@ -1,5 +1,5 @@
 # Two Months ML Journey: Building Confidence for a Career in Machine Learning
-# [Day: 1]
+# [Day: 2]
 
 ## Welcome to My Journey
 This repository chronicles my **2-month project-based learning journey** to build the skills and confidence needed to become a Junior Machine Learning (ML) Engineer.  
@@ -23,7 +23,7 @@ My journey begins with refreshing core skills to ensure a strong foundation for 
 
 ---
 
-  ## Current Focus: Prerequisite Revision [**Status**: 🟡 Ongoing]
+  ## Current Focus: Prerequisite Revision [**Status**: 🟢 Completed]
 I’m starting by revisiting foundational skills to ensure I’m ready for project-based learning. This phase (2-3 days) focuses on strengthening my Python, data handling, and ML basics, preparing me for EDA-heavy projects like **Titanic Survival Prediction** and **Crop Disease Detection**.
 ### Skills Being Revised
 - **Python**: Variables, loops, functions, list comprehensions, error handling.  
@@ -46,7 +46,7 @@ I’m starting by revisiting foundational skills to ensure I’m ready for proje
 ## Planned Projects
 Below are the projects I’ll tackle after prerequisites, each designed to build specific ML skills and showcase progress. I’ll update this section with new projects, EDA insights, and deployment links as I complete them.
 
-### 1. Titanic Survival Prediction (Classification) [**Status**: 🔴 Pending]
+### 1. Titanic Survival Prediction (Classification) [**Status**: 🟡 Ongoing]
 - **Dataset**: Titanic (Kaggle, ~891 samples)  
 - **Objective**: Predict passenger survival based on features like age, gender, and class.  
 - **Skills to Learn**:
@@ -153,4 +153,4 @@ curiosity and determination.
 
 ---
 
-**Last Updated**: August 23, 2025
+**Last Updated**: August 25, 2025
