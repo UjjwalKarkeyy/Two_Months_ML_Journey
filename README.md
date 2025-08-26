@@ -1,5 +1,5 @@
 # Two Months ML Journey: Building Confidence for a Career in Machine Learning
-# [Day: 2]
+# [Day: 3]
 
 ## Welcome to My Journey
 This repository chronicles my **2-month project-based learning journey** to build the skills and confidence needed to become a Junior Machine Learning (ML) Engineer.  
@@ -122,11 +122,11 @@ Below are the projects I’ll tackle after prerequisites, each designed to build
 ---
 
 ## Milestones
-- **Week 0 (Ongoing)**: Complete prerequisite revision (Python, pandas, NumPy, ML basics). Push Iris revision notebook to GitHub.  
+- **Week 0**: Complete prerequisite revision (Python, pandas, NumPy, ML basics). Push Iris revision notebook to GitHub.  
 - **Week 1-2**: Complete Titanic and Boston projects, focusing on EDA and basic models.  
 - **Week 3-4**: Build Wine Quality and Crop Disease projects, learn neural networks.  
 - **Week 5-6**: Develop Chatbot, deploy 2-3 projects.  
-- **Week 7-8**: Polish portfolio, prepare for interviews, apply to 10+ internships (Fusemachines, NAAMII, etc.).  
+- **Week 7-8**: Polish portfolio, prepare for interviews, apply to 10+ internships (Fusemachines, NAAMII, Cedar Gate, Palm Mind etc.).  
 
 ---
 
@@ -153,4 +153,4 @@ curiosity and determination.
 
 ---
 
-**Last Updated**: August 25, 2025
+**Last Updated**: August 26, 2025
