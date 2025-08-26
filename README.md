@@ -114,7 +114,7 @@ Below are the projects I’ll tackle after prerequisites, each designed to build
 - Visualization: Matplotlib/seaborn.  
 - ML Basics: Familiar with Iris dataset, logistic regression.  
 
-### Next Skills to Master
+### Skills After this Journey
 - Advanced EDA (correlation analysis, handling imbalanced data).  
 - Neural Networks (CNNs, LSTMs).  
 - Deployment (Streamlit, Flask).  
