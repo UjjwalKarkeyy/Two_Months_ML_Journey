@@ -1,5 +1,5 @@
 # Two Months ML Journey: Building Confidence for a Career in Machine Learning
-# [Day: 5]
+# [Day: 6]
 
 ## Welcome to My Journey
 This repository chronicles my **2-month project-based learning journey** to build the skills and confidence needed to become a Junior Machine Learning (ML) Engineer.  
@@ -46,7 +46,7 @@ I’m starting by revisiting foundational skills to ensure I’m ready for proje
 ## Planned Projects
 Below are the projects I’ll tackle after prerequisites, each designed to build specific ML skills and showcase progress. I’ll update this section with new projects, EDA insights, and deployment links as I complete them.
 
-### 1. Titanic Survival Prediction (Classification) [**Status**: 🟡 Ongoing]
+### 1. Titanic Survival Prediction (Classification) [**Status**: 🟢 Completed]
 - **Dataset**: Titanic (Kaggle, ~891 samples)  
 - **Objective**: Predict passenger survival based on features like age, gender, and class.  
 - **Skills to Learn**:
@@ -58,7 +58,7 @@ Below are the projects I’ll tackle after prerequisites, each designed to build
 
 ---
 
-### 2. Boston Housing Price Prediction (Regression) [**Status**: 🔴 Pending]
+### 2. Boston Housing Price Prediction (Regression) [**Status**: 🟡 Ongoing]
 - **Dataset**: Boston Housing (scikit-learn, 506 samples)  
 - **Objective**: Predict house prices based on features like number of rooms and crime rate.  
 - **Skills to Learn**:
@@ -153,4 +153,4 @@ curiosity and determination.
 
 ---
 
-**Last Updated**: August 27, 2025
+**Last Updated**: August 28, 2025
