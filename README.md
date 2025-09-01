@@ -1,5 +1,5 @@
 # Two Months ML Journey: Building Confidence for a Career in Machine Learning
-# [Day: 9]
+# [Day: 10]
 
 ## Welcome to My Journey
 This repository chronicles my **2-month project-based learning journey** to build the skills and confidence needed to become a Junior Machine Learning (ML) Engineer.  
@@ -58,7 +58,7 @@ Below are the projects I’ll tackle after prerequisites, each designed to build
 
 ---
 
-### 2. Boston Housing Price Prediction (Regression) [**Status**: 🟡 Ongoing]
+### 2. Boston Housing Price Prediction (Regression) [**Status**: 🟢 Completed]
 - **Dataset**: Boston Housing (scikit-learn, 506 samples)  
 - **Objective**: Predict house prices based on features like number of rooms and crime rate.  
 - **Skills to Learn**:
@@ -70,7 +70,7 @@ Below are the projects I’ll tackle after prerequisites, each designed to build
 
 ---
 
-### 3. Wine Quality Prediction (Multiclass Classification) [**Status**: 🔴 Pending]
+### 3. Wine Quality Prediction (Multiclass Classification) [**Status**: 🟡 Ongoing]
 - **Dataset**: Wine Quality (UCI/Kaggle, ~4,800 samples)  
 - **Objective**: Predict wine quality based on chemical properties (e.g., pH, alcohol).  
 - **Skills to Learn**:
@@ -153,4 +153,4 @@ curiosity and determination.
 
 ---
 
-**Last Updated**: August 31, 2025
+**Last Updated**: September 1, 2025
