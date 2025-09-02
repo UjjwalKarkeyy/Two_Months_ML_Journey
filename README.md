@@ -1,5 +1,5 @@
 # Two Months ML Journey: Building Confidence for a Career in Machine Learning
-# [Day: 10]
+# [Day: 11]
 
 ## Welcome to My Journey
 This repository chronicles my **2-month project-based learning journey** to build the skills and confidence needed to become a Junior Machine Learning (ML) Engineer.  
@@ -153,4 +153,4 @@ curiosity and determination.
 
 ---
 
-**Last Updated**: September 1, 2025
+**Last Updated**: September 2, 2025
