@@ -70,7 +70,7 @@ Below are the projects I’ll tackle after prerequisites, each designed to build
 
 ---
 
-### 3. Wine Quality Prediction (Multiclass Classification) [**Status**: 🟡 Ongoing]
+### 3. Wine Quality Prediction (Multiclass Classification) [**Status**: 🟢 Completed]
 - **Dataset**: Wine Quality (UCI/Kaggle, ~4,800 samples)  
 - **Objective**: Predict wine quality based on chemical properties (e.g., pH, alcohol).  
 - **Skills to Learn**:
@@ -82,7 +82,7 @@ Below are the projects I’ll tackle after prerequisites, each designed to build
 
 ---
 
-### 4. Crop Disease Detection (Computer Vision) [**Status**: 🔴 Pending]
+### 4. Crop Disease Detection (Computer Vision) [**Status**: 🟡 Ongoing]
 - **Dataset**: PlantVillage (Kaggle, ~50,000 images)  
 - **Objective**: Classify crop images as healthy or diseased (e.g., rice, maize).  
 - **Skills to Learn**:
@@ -153,4 +153,4 @@ curiosity and determination.
 
 ---
 
-**Last Updated**: September 23, 2025
+**Last Updated**: October 13, 2025
