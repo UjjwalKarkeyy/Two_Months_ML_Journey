@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from PIL import Image, ImageOps, UnidentifiedImageError
+import pandas as pd
 
 class CheckImgProp:
     # constructor
@@ -19,15 +20,15 @@ class CheckImgProp:
 
     # check image sizes (resize if needed)
     def check_size(self):
-        self._iterate('s')
+        return self._iterate('s')
 
     # converting image mode (RGB or grayscale 'L')
     def change_format(self):
-        self._iterate('f')
+        return self._iterate('f')
         
     # checking class distribution
     def class_dist(self):
-        self._iterate('cd')
+        return self._iterate('cd')
 
     def _is_image(self, name, exts=('.jpg', '.jpeg', '.png')):
         return name.lower().endswith(exts)
@@ -45,6 +46,7 @@ class CheckImgProp:
             print("Invalid mode. Use 'cd' (class distribution), 's' (size), or 'f' (format)")
             return
 
+        class_data = []
         for veg_name in os.listdir(self.main_dir):
             class_path = self.main_dir / veg_name
             if not class_path.is_dir():
@@ -64,7 +66,10 @@ class CheckImgProp:
 
                     # count classes
                     total_classes += 1
-                    is_healthy_class = (self.healthy_class in class_name.lower())
+                    is_healthy_class = (
+                        self.healthy_class is not None
+                        and self.healthy_class in class_name.lower()
+                    )                    
                     if is_healthy_class:
                         healthy_classes += 1
 
@@ -76,14 +81,16 @@ class CheckImgProp:
 
                 disease_classes = total_classes - healthy_classes
                 disease_files = total_files - healthy_files
-
-                print(f"\n{veg_name}:")
-                print(f"  Healthy classes: {healthy_classes}")
-                print(f"  Disease classes: {disease_classes}")
-                print(f"  Healthy files:  {healthy_files}")
-                print(f"  Disease files:  {disease_files}")
-                print(f"  Total files:    {total_files}")
-                continue  # next veg
+                data = {
+                    'veg_name': veg_name,
+                    'disease_classes': disease_classes,
+                    'healthy_classes': healthy_classes,
+                    'disease_files': disease_files,
+                    'healthy_files': healthy_files,
+                    'total_files': total_files,
+                    
+                }
+                class_data.append(data)
 
             elif mode in ('s', 'f'):
                 # ---------- MODES 's' (resize) or 'f' (format) ----------
@@ -146,3 +153,5 @@ class CheckImgProp:
                             print(f"[ERROR] File not found: {in_path.relative_to(self.main_dir)}")
                         except Exception as e:
                             print(f"[ERROR] {in_path.relative_to(self.main_dir)}: {e}")
+        if mode == 'cd':
+            return pd.DataFrame(class_data)
