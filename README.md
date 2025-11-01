@@ -1,5 +1,5 @@
 # Two Months ML Journey: Building Confidence for a Career in Machine Learning
-# [Day: 44]
+# [Day: 47]
 
 ## Welcome to My Journey
 This repository chronicles my **2-month project-based learning journey** to build the skills and confidence needed to become a Junior Machine Learning (ML) Engineer.  
@@ -82,7 +82,7 @@ Below are the projects I’ll tackle after prerequisites, each designed to build
 
 ---
 
-### 4. Crop Disease Detection (Computer Vision) [**Status**: 🟡 Ongoing]
+### 4. Crop Disease Detection (Computer Vision) [**Status**: 🟢 Completed]
 - **Dataset**: PlantVillage (Kaggle, ~50,000 images)  
 - **Objective**: Classify crop images as healthy or diseased (e.g., rice, maize).  
 - **Skills to Learn**:
@@ -94,7 +94,7 @@ Below are the projects I’ll tackle after prerequisites, each designed to build
 
 ---
 
-### 5. Customer Support Chatbot (NLP) [**Status**: 🔴 Pending]
+### 5. Customer Support Chatbot (NLP) [**Status**: 🟡 Ongoing]
 - **Dataset**: Customer Support on Twitter (Kaggle) or synthetic Nepali Q&A data  
 - **Objective**: Build a chatbot for automated customer responses.  
 - **Skills to Learn**:
@@ -153,4 +153,4 @@ curiosity and determination.
 
 ---
 
-**Last Updated**: October 27, 2025
+**Last Updated**: November 01, 2025
