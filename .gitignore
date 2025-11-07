@@ -3,3 +3,5 @@
 *Workflow-Tasks_List-advise-by-chatGpt.docx
 **.venv
 **.env
+**test.py
+**/chroma/
