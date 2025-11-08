@@ -6,6 +6,7 @@ from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_classic.retrievers import MultiQueryRetriever
 import os
 import shutil
 import warnings
@@ -16,7 +17,7 @@ import warnings
 """
 warnings.filterwarnings(
     "ignore",
-    message="Relevance scores must be between 0 and 1",
+    message="The method `BaseRetriever.get_relevant_documents` was deprecated in langchain-core 0.1.46 and will be removed in 1.0. Use :meth:`~invoke` instead",
     category=UserWarning
 )
 
@@ -117,22 +118,25 @@ def load_rag():
 conversation = []
 def BainiAI(user_input: str):
     # print(user_input)
-    # retrive context from the DB using similarity search
-    results = db.similarity_search_with_relevance_scores(user_input, k = 3)
-    # check if there are any matching results or if the relevance score is too low
-    if len(results) == 0 or results[0][1] < 0:
+    # retrive context from the DB using multiquery retriever
+    results = multi_retriever.get_relevant_documents(user_input)
+    # check if there are results
+    if not results:
         print(f"Unable to answer that!")
 
     else:
         # combine context from matching documents
-        context_text = "\n\n - - \n\n".join([doc.page_content for doc, _score in results])
+        context_text = "\n\n - - \n\n".join([doc.page_content for doc in results])
         # print(context_text)
 
         # create prompt template using context and query text
         PROMPT_TEMPLATE = """
             Answer the question based on the following context: {context}
             - - 
-            Answer the question based on the above context: {question}
+            You are BainiAI, an intelligent virtual assistant for TechNova Solutions Pvt. Ltd.
+            Your role is to help employees and customers learn about the company and its policies.
+            The information you rely on comes strictly from the provided documents (i.e., context provided above), 
+            which include the company overview and departmental policies such as HR and IT: {question}
         """
         prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
         prompt = prompt_template.format(context = context_text, question = user_input)
@@ -140,12 +144,6 @@ def BainiAI(user_input: str):
         response = llm.invoke(prompt)
         conversation.append(("assistant", response.content))
         return response
-
-# initialize the gemini model
-llm = ChatGoogleGenerativeAI(
-    model='gemini-2.5-flash',
-    api_key = os.getenv('GEMINI_API_KEY'),
-)
 
 """
                                 Program's Main Execution
@@ -155,6 +153,20 @@ llm = ChatGoogleGenerativeAI(
 if __name__ == "__main__":
     generate_data_store()
     db = load_rag()
+
+    # initialize the gemini model
+    llm = ChatGoogleGenerativeAI(
+        model='gemini-2.5-flash',
+        api_key = os.getenv('GEMINI_API_KEY'),
+    )
+
+    # initialize the retriever
+    retriever = db.as_retriever(search_kwargs={"k": 3})
+    multi_retriever = MultiQueryRetriever.from_llm(
+    retriever = retriever,
+    llm = llm,
+)
+
     print("bainiAI(type 'exit' to quit)\n")
     while True:
         print("Human Message\n")
