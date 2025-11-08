@@ -119,7 +119,7 @@ conversation = []
 def BainiAI(user_input: str):
     # print(user_input)
     # retrive context from the DB using multiquery retriever
-    results = multi_retriever.get_relevant_documents(user_input)
+    results = multi_retriever.invoke(user_input)
     # check if there are results
     if not results:
         print(f"Unable to answer that!")
@@ -133,7 +133,7 @@ def BainiAI(user_input: str):
         PROMPT_TEMPLATE = """
             Answer the question based on the following context: {context}
             - - 
-            You are BainiAI, an intelligent virtual assistant for TechNova Solutions Pvt. Ltd.
+            You are bainiAI, an intelligent virtual assistant for TechNova Solutions Pvt. Ltd.
             Your role is to help employees and customers learn about the company and its policies.
             The information you rely on comes strictly from the provided documents (i.e., context provided above), 
             which include the company overview and departmental policies such as HR and IT: {question}
@@ -169,11 +169,12 @@ if __name__ == "__main__":
 
     print("bainiAI(type 'exit' to quit)\n")
     while True:
-        print("Human Message\n")
+        print("======================================== Human Message ========================================\n")
         user_input = input()
         # any takes boolean values, returns true if any val is true, else returns false
         if any( word in user_input.lower() for word in ["exit", "quit"]):
-            print("Bye Bye!\n")
+            print("======================================== Ai Message ========================================\n")
+            print("Bye Bye!")
             break
         chatbot_response = BainiAI(user_input)
         print("Maybe you want to know about our company?") if chatbot_response == None else chatbot_response.pretty_print()
