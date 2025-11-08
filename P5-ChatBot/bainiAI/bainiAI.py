@@ -7,6 +7,9 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_classic.retrievers import MultiQueryRetriever
+from langchain_core.chat_history import InMemoryChatMessageHistory
+from langchain_core.runnables.history import RunnableWithMessageHistory
+from langchain_core.messages import HumanMessage
 import os
 import shutil
 import warnings
@@ -115,7 +118,6 @@ def load_rag():
 -----------------------------------------------------------------------------------------------
 """
 
-conversation = []
 def BainiAI(user_input: str):
     # print(user_input)
     # retrive context from the DB using multiquery retriever
@@ -140,10 +142,23 @@ def BainiAI(user_input: str):
         """
         prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
         prompt = prompt_template.format(context = context_text, question = user_input)
-        conversation.append(("human", user_input))
-        response = llm.invoke(prompt)
-        conversation.append(("assistant", response.content))
+        response = conversation.invoke(
+            {"messages": [HumanMessage(content=prompt)]},
+            config = {"configurable": {"session_id": "default"}},
+        )
         return response
+
+"""
+                                Setup Session Message History
+-----------------------------------------------------------------------------------------------
+"""
+
+# single-session chat history
+chat_history = InMemoryChatMessageHistory()
+
+# define a simple function to always return this single session
+def get_session_history(session_id):
+    return chat_history  # same in-memory chat for now
 
 """
                                 Program's Main Execution
@@ -165,7 +180,13 @@ if __name__ == "__main__":
     multi_retriever = MultiQueryRetriever.from_llm(
     retriever = retriever,
     llm = llm,
-)
+    )
+
+    # initialize runnable message history
+    conversation = RunnableWithMessageHistory(
+        runnable = llm,
+        get_session_history = get_session_history,
+    )
 
     print("bainiAI(type 'exit' to quit)\n")
     while True:
@@ -177,8 +198,11 @@ if __name__ == "__main__":
             print("Bye Bye!")
             break
         chatbot_response = BainiAI(user_input)
-        print("Maybe you want to know about our company?") if chatbot_response == None else chatbot_response.pretty_print()
-
+        if chatbot_response == None: 
+            print("Maybe you want to know about our company?") 
+        else:
+            print("======================================== Ai Message ========================================\n")
+            print(chatbot_response.content)
 
 
 

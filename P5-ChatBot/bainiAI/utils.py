@@ -44,4 +44,6 @@ Ans: POSIX stands for Portable Operating System Interface — its a standard tha
     Basically, its a universal rulebook that ensures different Unix-based systems behave consistently. 
 3. Difference between extend and append.
 Ans:
+    Use append() when you want to add a single item (which could be an entire object like another list) as one unit to the end of your list.
+    Use extend() when you want to add all the individual items from an iterable (like merging another list) into your existing list.
 '''
