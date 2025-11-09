@@ -203,7 +203,6 @@ def appointment_details(ai_msg: str):
     # call appointment_reader from utils.py
     appointment_reader_saver(ai_messages[1])
 
-
 """
                                 Setup Session Message History
 -----------------------------------------------------------------------------------------------
