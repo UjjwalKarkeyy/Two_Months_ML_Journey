@@ -2,8 +2,21 @@ import glob
 import re
 from pathlib import Path
 from langchain_community.document_loaders import UnstructuredWordDocumentLoader, PyPDFLoader
+import pandas as pd
+from openpyxl import load_workbook
 
-# function to load document
+"""
+                        Load Excel File
+-----------------------------------------------------------------------------------------------
+"""
+excel_path = "./data/appointments/appointments_technova.xlsx"
+sheet_name = "Sheet1"
+# load workbook
+book = load_workbook(excel_path)
+"""
+                        Load Documents
+-----------------------------------------------------------------------------------------------
+"""
 def file_reader(path: str, extensions: tuple):
     # give data path
     data_path = Path(path)
@@ -29,8 +42,11 @@ def file_reader(path: str, extensions: tuple):
 
     return documents
 
-# function to fetch details from appointment
-def appointment_reader(msg: str):
+"""
+                        Fetch Appointment Details
+-----------------------------------------------------------------------------------------------
+"""
+def appointment_reader_saver(msg: str):
     # Use case-insensitive regex and allow flexible spacing/newlines
     patterns = {
         "name": r"(?i)name\s*[:\-]\s*([A-Za-z ]+)",
@@ -42,10 +58,17 @@ def appointment_reader(msg: str):
     extracted = {}
     for key, pattern in patterns.items():
         match = re.search(pattern, msg, re.DOTALL)  # DOTALL makes it work across lines
-        extracted[key] = match.group(1).strip() if match else None
+        extracted[key] = [match.group(1).strip() if match else None]
 
-    return extracted
-
+    # dataframe to store appointment details
+    df = pd.DataFrame(extracted)
+    # create ExcelWriter object using openpyxl as engine
+    # Set mode = 'a' for append mode and if_sheet_exists = 'overlay' to overwrite existing cells
+    with pd.ExcelWriter(excel_path, engine='openpyxl', mode='a', if_sheet_exists='overlay') as writer:
+        # Write the new DataFrame to the specified sheet
+        # Set startrow to append data below existing content, or 0 to overwrite from the beginning
+        # index=False prevents writing the DataFrame index to Excel
+        df.to_excel(writer, sheet_name=sheet_name, header=False, index=False, startrow=book[sheet_name].max_row)
 '''
                         My Questions
 -----------------------------------------------------------------------------

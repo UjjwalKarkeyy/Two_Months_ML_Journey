@@ -1,6 +1,6 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
-from utils import file_reader, appointment_reader
+from utils import file_reader, appointment_reader_saver
 from langchain_core.documents import Document
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -201,7 +201,7 @@ def appointment_details(ai_msg: str):
 
     # The second-most recent AI message should contain the confirmation details
     # call appointment_reader from utils.py
-    return appointment_reader(ai_messages[1])
+    appointment_reader_saver(ai_messages[1])
 
 """
                                 Setup Session Message History
@@ -254,8 +254,7 @@ if __name__ == "__main__":
             break
         chatbot_response = BainiAI(user_input)
         # check for appointment details
-        store_details = appointment_details(chatbot_response.content)
-        print(f"Fetched details:\n{store_details}")
+        appointment_details(chatbot_response.content)
         # check bot msg and print response
         if chatbot_response == None: 
             print("Maybe you want to know about our company?") 
