@@ -1,6 +1,6 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
-from utils import file_reader
+from utils import file_reader, appointment_reader
 from langchain_core.documents import Document
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -10,9 +10,18 @@ from langchain_classic.retrievers import MultiQueryRetriever
 from langchain_core.chat_history import InMemoryChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_core.messages import HumanMessage
+from datetime import date
 import os
 import shutil
 import warnings
+import re
+
+"""
+                        Store Current Date for Appointment Booking
+-----------------------------------------------------------------------------------------------
+"""
+
+curr_date = date.today()
 
 """
                         Ignoring Warnings for Score
@@ -133,20 +142,66 @@ def BainiAI(user_input: str):
 
         # create prompt template using context and query text
         PROMPT_TEMPLATE = """
-            Answer the question based on the following context: {context}
-            - - 
-            You are bainiAI, an intelligent virtual assistant for TechNova Solutions Pvt. Ltd.
-            Your role is to help employees and customers learn about the company and its policies.
-            The information you rely on comes strictly from the provided documents (i.e., context provided above), 
-            which include the company overview and departmental policies such as HR and IT: {question}
+            You are BainiAI, the official virtual assistant of TechNova Solutions Pvt. Ltd.  
+            You help users with company information, policy-related questions (HR, IT, etc.), and appointment bookings.
+
+            Use the provided context to answer queries.  
+            If the answer is not in the context, respond politely that you don’t have that information.
+
+            When handling appointments:
+            - Collect: Name, Phone Number, Email, and Preferred Date.
+            - Make sure to confirm the details in this exact format (no markdown, symbols, or extra text):
+
+            Name: <full name>
+            Phone Number: <digits only>
+            Email: <valid email>
+            Date: <YYYY-MM-DD>
+
+            Example:
+            Name: Ujjwal Karki
+            Phone Number: 9824097004
+            Email: ujjwalkarki0413@gmail.com
+            Date: 2025-11-12
+
+            Always convert relative dates (e.g., “tomorrow,” “next Monday”) into actual calendar dates based on today’s date: {curr_date}.  
+            Only after user confirms, finalize with a short response including the words “appointment” and “booked.”
+
+            Context:
+            {context}
+
+            Question:
+            {question}
         """
         prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
-        prompt = prompt_template.format(context = context_text, question = user_input)
+        prompt = prompt_template.format(context = context_text, question = user_input, curr_date = curr_date)
         response = conversation.invoke(
             {"messages": [HumanMessage(content=prompt)]},
             config = {"configurable": {"session_id": "default"}},
         )
         return response
+    
+"""
+                                Use Regex to Gain Appointment Details
+-----------------------------------------------------------------------------------------------
+"""
+
+def appointment_details(ai_msg: str):
+    has_appointment = re.search(r"\bappointment[s]?\b", ai_msg, re.IGNORECASE)
+    has_booked = re.search(r"\b(book(ed|ing)?)\b", ai_msg, re.IGNORECASE)
+
+    if not (has_appointment and has_booked):
+        return None
+
+    # Collect AI messages from chat history (most recent first)
+    ai_messages = [m.content for m in reversed(chat_history.messages) if m.type == "ai"]
+
+    # Make sure there are at least 2 AI messages
+    if len(ai_messages) < 2:
+        return None
+
+    # The second-most recent AI message should contain the confirmation details
+    # call appointment_reader from utils.py
+    return appointment_reader(ai_messages[1])
 
 """
                                 Setup Session Message History
@@ -198,6 +253,10 @@ if __name__ == "__main__":
             print("Bye Bye!")
             break
         chatbot_response = BainiAI(user_input)
+        # check for appointment details
+        store_details = appointment_details(chatbot_response.content)
+        print(f"Fetched details:\n{store_details}")
+        # check bot msg and print response
         if chatbot_response == None: 
             print("Maybe you want to know about our company?") 
         else:
