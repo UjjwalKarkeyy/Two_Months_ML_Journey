@@ -275,4 +275,13 @@ Ans:
     other stateful data) tied to a thread_id (so that you can resume a thread later). Because it lives only in memory, once 
     your process ends or is restarted, the stored state is lost. This means InMemorySaver is non-persistent.
 
+2. What are ReAct and Tool-based agents?
+Ans: The way I like to differentiate between the two is that tool-based agents are more like a one time function call.
+So, if I want to get the current date and pass it to the LLM then I will call curr_date() function and pass its output to
+LLM which LLM will use to give the final result. ReAct (Reason and then Act) is similar, however, unlike tool-based agent
+which just calls a function and outputs a result, ReAct agents combine different function calls to give the final result.
+So, taking the same example of current date, a ReAct based agent would see through each step so is it that the user is just
+asking the date or maybe the user also wants to book an appointment. If it is the later one, the on top of calling curr_date
+function, ReAct agent would also call say 'search_appointment' function to look throught the database and see if today
+there are any slots empty for booking an appointment. 
 """
