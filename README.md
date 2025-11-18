@@ -1,5 +1,5 @@
 # Two Months ML Journey: Building Confidence for a Career in Machine Learning
-# [Day: 54]
+# [Day: 55]
 
 ## Welcome to My Journey
 This repository chronicles my **2-month project-based learning journey** to build the skills and confidence needed to become a Junior Machine Learning (ML) Engineer.  
@@ -140,13 +140,13 @@ I’m starting by revisiting foundational skills to ensure I’m ready for proje
 </ul>
 
 <p><strong>Know more about this project:</strong><br>
-<a href="YOUR_CROP_DISEASE_REPO_LINK_HERE">Add external repository link here</a>
+<a href="https://github.com/UjjwalKarkeyy/Crop_Disease_Prediction_Deploy">Add external repository link here</a>
 </p>
 
 <hr>
 
 <h3>5. BainiAI – Customer Support Chatbot (RAG + LLM Tools)</h3>
-<p><strong>Status:</strong> 🟡 Ongoing<br>
+<p><strong>Status:</strong> 🟢 Completed<br>
 <strong>Folder:</strong> <code>P5-ChatBot/</code><br>
 <strong>Dataset / Knowledge Source:</strong> Internal documents and text data loaded into a Retrieval-Augmented Generation (RAG) pipeline.<br>
 <strong>Objective:</strong> Build an AI assistant that can answer user queries from documents and also book appointments through a conversational form.</p>
@@ -175,7 +175,7 @@ I’m starting by revisiting foundational skills to ensure I’m ready for proje
 </ul>
 
 <p><strong>Know more about this project:</strong><br>
-<a href="YOUR_BAINIAI_REPO_LINK_HERE">Add external repository link here</a>
+<a href="https://github.com/UjjwalKarkeyy/bainiAI_Chatbot_Full">Add external repository link here</a>
 </p>
 
 <hr>
@@ -191,7 +191,7 @@ I’m starting by revisiting foundational skills to ensure I’m ready for proje
 
 ### Skills After this Journey
 - Advanced EDA (correlation analysis, handling imbalanced data).  
-- Neural Networks (CNNs, LSTMs).  
+- Neural Networks (CNNs).  
 - Deployment (Streamlit, Flask).  
 
 ---
@@ -274,4 +274,4 @@ curiosity and determination.
 
 ---
 
-**Last Updated**: November 11, 2025
+**Last Updated**: November 18, 2025
