@@ -43,67 +43,142 @@ I’m starting by revisiting foundational skills to ensure I’m ready for proje
 
 ---
 
-## Planned Projects
-Below are the projects I’ll tackle after prerequisites, each designed to build specific ML skills and showcase progress. I’ll update this section with new projects, EDA insights, and deployment links as I complete them.
+<!-- Planned Projects -->
+<h2>Planned Projects</h2>
 
-### 1. Titanic Survival Prediction (Classification) [**Status**: 🟢 Completed]
-- **Dataset**: Titanic (Kaggle, ~891 samples)  
-- **Objective**: Predict passenger survival based on features like age, gender, and class.  
-- **Skills to Learn**:
-  - EDA: Visualize survival rates, handle missing values, encode categoricals.  
-  - Models: Logistic Regression, Decision Trees, Random Forests.  
-  - Evaluation: Accuracy, precision, recall, confusion matrix.  
-- **Nepal Relevance**: Classification skills for healthcare (e.g., NAAMII’s disease prediction).  
-- **Next Steps**: Deploy as a Streamlit app. 
+<p>
+  Below are the projects I am working on or have completed. Each one builds core ML skills while also moving toward an
+  <strong>AI engineering</strong> mindset with clean pipelines, modular code, and deployment readiness.
+</p>
 
----
+<h3>1. Titanic Survival Prediction (Classification)</h3>
+<p><strong>Status:</strong> 🟢 Completed<br>
+<strong>Folder:</strong> <code>P1-Titanic_Project/</code><br>
+<strong>Dataset:</strong> Titanic (Kaggle, ~891 samples)<br>
+<strong>Objective:</strong> Predict passenger survival based on features like age, gender, and class.</p>
 
-### 2. Boston Housing Price Prediction (Regression) [**Status**: 🟢 Completed]
-- **Dataset**: Boston Housing (scikit-learn, 506 samples)  
-- **Objective**: Predict house prices based on features like number of rooms and crime rate.  
-- **Skills to Learn**:
-  - EDA: Scatter plots, correlation heatmaps, feature scaling.  
-  - Models: Linear Regression, Random Forests.  
-  - Evaluation: MSE, R² score.  
-- **Nepal Relevance**: Regression for fintech or real estate analytics (e.g., Fusemachines’ solutions).  
-- **Next Steps**: Add feature selection and deploy.  
+<h4>What I worked on</h4>
+<ul>
+  <li>Performed structured EDA on survival rates and feature distributions.</li>
+  <li>Handled missing values and encoded categorical features.</li>
+  <li>Built preprocessing and modeling pipelines using scikit-learn.</li>
+  <li>Trained models such as Logistic Regression, Decision Trees, and Random Forests.</li>
+</ul>
 
----
+<h4>AI/ML angle</h4>
+<ul>
+  <li>Introduced reproducible ML pipelines instead of one-off scripts.</li>
+  <li>Prepared the project so it can later be wrapped into an API or simple web app.</li>
+</ul>
 
-### 3. Wine Quality Prediction (Multiclass Classification) [**Status**: 🟢 Completed]
-- **Dataset**: Wine Quality (UCI/Kaggle, ~4,800 samples)  
-- **Objective**: Predict wine quality based on chemical properties (e.g., pH, alcohol).  
-- **Skills to Learn**:
-  - EDA: Box plots, class distribution analysis, handling imbalanced data.  
-  - Models: k-Nearest Neighbors, SVM, Neural Networks (Keras).  
-  - Evaluation: F1-score, accuracy.  
-- **Nepal Relevance**: Quality prediction for agriculture (e.g., tea quality in Nepal).  
-- **Next Steps**: Experiment with PCA and deploy.  
+<hr>
 
----
+<h3>2. Boston Housing Price Prediction (Regression)</h3>
+<p><strong>Status:</strong> 🟢 Completed<br>
+<strong>Folder:</strong> <code>P2-Boston_House_Pred/</code><br>
+<strong>Dataset:</strong> Boston Housing (scikit-learn, 506 samples)<br>
+<strong>Objective:</strong> Predict house prices based on features like number of rooms, crime rate, and other neighborhood characteristics.</p>
 
-### 4. Crop Disease Detection (Computer Vision) [**Status**: 🟢 Completed]
-- **Dataset**: PlantVillage (Kaggle, ~50,000 images)  
-- **Objective**: Classify crop images as healthy or diseased (e.g., rice, maize).  
-- **Skills to Learn**:
-  - EDA: Image visualizations, class balance analysis, data augmentation.  
-  - Models: CNNs, Transfer Learning (MobileNet).  
-  - Evaluation: Accuracy, precision/recall.  
-- **Nepal Relevance**: Supports Nepal’s agriculture sector (e.g., NAAMII’s vegetable disease detection).  
-- **Next Steps**: Deploy as a mobile-friendly web app for farmers.  
+<h4>What I worked on</h4>
+<ul>
+  <li>Conducted EDA using scatter plots, histograms, and correlation heatmaps.</li>
+  <li>Implemented custom logic (e.g., Mahalanobis distance in <code>mahalanobis.py</code>) to explore outliers and feature space.</li>
+  <li>Built modular pipelines (e.g., exported as <code>bhp_pipeline.joblib</code>) for preprocessing and regression models.</li>
+  <li>Evaluated models such as Linear Regression and Random Forest Regressor using metrics like MSE and R².</li>
+</ul>
 
----
+<h4>AI/ML angle</h4>
+<ul>
+  <li>Focused on clean, reusable code via custom transformers and saved pipelines.</li>
+  <li>Took a step toward production readiness by exporting trained pipelines using <code>joblib</code>.</li>
+</ul>
 
-### 5. Customer Support Chatbot (NLP) [**Status**: 🟡 Ongoing]
-- **Dataset**: Customer Support on Twitter (Kaggle) or synthetic Nepali Q&A data  
-- **Objective**: Build a chatbot for automated customer responses.  
-- **Skills to Learn**:
-  - EDA: Word clouds, n-gram analysis, text preprocessing (tokenization, TF-IDF).  
-  - Models: Rule-based or seq2seq (TensorFlow), Hugging Face transformers.  
-  - Evaluation: BLEU score, response accuracy.  
-- **Nepal Relevance**: NLP for local businesses or Nepali language processing (e.g., Paaila Technology).  
-- **Next Steps**: Deploy as a web-based chatbot.  
+<hr>
 
+<h3>3. Wine Quality Prediction (Multiclass Classification)</h3>
+<p><strong>Status:</strong> 🟢 Completed<br>
+<strong>Folder:</strong> <code>P3-Wine_Quality_Pred/</code><br>
+<strong>Dataset:</strong> Wine Quality (UCI/Kaggle, ~4,800 samples)<br>
+<strong>Objective:</strong> Predict wine quality scores based on chemical properties (e.g., pH, alcohol content, acidity).</p>
+
+<h4>What I worked on</h4>
+<ul>
+  <li>Performed EDA with box plots, distribution analysis, and class balance checks.</li>
+  <li>Built multiple models: k-Nearest Neighbors, SVM, and a simple Neural Network in Keras.</li>
+  <li>Compared model performance using accuracy and F1-score.</li>
+  <li>Structured the notebooks (<code>wqp_eda.ipynb</code>, <code>wqp_model.ipynb</code>, <code>wqp_model_nn.ipynb</code>) to separate EDA and modeling logic.</li>
+</ul>
+
+<h4>AI/ML angle</h4>
+<ul>
+  <li>Practiced experiment-style workflow by training several models on the same problem.</li>
+  <li>Continued the habit of saving and organizing pipelines for future reuse.</li>
+</ul>
+
+<hr>
+
+<h3>4. Crop Disease Detection (Computer Vision, End-to-End AI Project)</h3>
+<p><strong>Status:</strong> 🟢 Completed<br>
+<strong>Folder:</strong> <code>P4-Crop_Disease_Pred/</code><br>
+<strong>Dataset:</strong> PlantVillage (Kaggle, ~50,000 images)<br>
+<strong>Objective:</strong> Classify crop images (e.g., rice, maize) as healthy or diseased to support farmers and agriculture.</p>
+
+<h4>What I worked on</h4>
+<ul>
+  <li>Performed dataset exploration: visualized sample images, inspected class distribution, and identified imbalance.</li>
+  <li>Used Convolutional Neural Networks and Transfer Learning (e.g., MobileNet-based architecture).</li>
+  <li>Applied data augmentation to improve generalization.</li>
+  <li>Exported trained models and weights for inference.</li>
+  <li>In a separate repository, built a <strong>FastAPI backend</strong> to serve predictions and a <strong>React frontend</strong> for users to upload images.</li>
+  <li>Containerized the system using Docker and deployed it on the cloud.</li>
+</ul>
+
+<h4>AI engineering angle</h4>
+<ul>
+  <li>Goes beyond a notebook and becomes a real application stack: model + API + UI + Docker.</li>
+  <li>Designed with real users in mind (farmers or agriculture workers), not just offline experiments.</li>
+</ul>
+
+<p><strong>Know more about this project:</strong><br>
+<a href="YOUR_CROP_DISEASE_REPO_LINK_HERE">Add external repository link here</a>
+</p>
+
+<hr>
+
+<h3>5. BainiAI – Customer Support Chatbot (RAG + LLM Tools)</h3>
+<p><strong>Status:</strong> 🟡 Ongoing<br>
+<strong>Folder:</strong> <code>P5-ChatBot/</code><br>
+<strong>Dataset / Knowledge Source:</strong> Internal documents and text data loaded into a Retrieval-Augmented Generation (RAG) pipeline.<br>
+<strong>Objective:</strong> Build an AI assistant that can answer user queries from documents and also book appointments through a conversational form.</p>
+
+<h4>What I worked on</h4>
+<ul>
+  <li>Implemented a RAG pipeline using <strong>LangChain</strong> and <strong>Gemini</strong>.</li>
+  <li>Loaded and chunked documents, created embeddings, and stored them in <strong>Chroma</strong> as a vector database.</li>
+  <li>Used <code>MultiQueryRetriever</code> to improve recall and handle diverse user questions.</li>
+  <li>Added conversational memory using LangChain’s message history for multi-turn chats.</li>
+  <li>Designed a conversational appointment flow that:
+    <ul>
+      <li>Asks for and validates name, email, and phone number.</li>
+      <li>Understands natural language dates like “next Monday” or “coming Thursday” and converts them to proper date formats.</li>
+      <li>Stores booked appointments into an Excel sheet for non-technical staff to review easily.</li>
+    </ul>
+  </li>
+  <li>Built a <strong>FastAPI backend</strong> and <strong>React (Vite) frontend</strong> for the chatbot interface.</li>
+  <li>Dockerized the backend and frontend for consistent deployment.</li>
+</ul>
+
+<h4>AI engineering angle</h4>
+<ul>
+  <li>Combines LLMs, tools, memory, and external storage (Excel, vector DB) into one system.</li>
+  <li>Moves from “just a model” to a real AI product with an API, UI, and integrations.</li>
+</ul>
+
+<p><strong>Know more about this project:</strong><br>
+<a href="YOUR_BAINIAI_REPO_LINK_HERE">Add external repository link here</a>
+</p>
+
+<hr>
 ---
 
 ## Skills Progress
@@ -121,12 +196,58 @@ Below are the projects I’ll tackle after prerequisites, each designed to build
 
 ---
 
-## Milestones
-- **Week 0**: Complete prerequisite revision (Python, pandas, NumPy, ML basics). Push Iris revision notebook to GitHub.  
-- **Week 1-2**: Complete Titanic and Boston projects, focusing on EDA and basic models.  
-- **Week 3-4**: Build Wine Quality and Crop Disease projects, learn neural networks.  
-- **Week 5-6**: Develop Chatbot, deploy 2-3 projects.  
-- **Week 7-8**: Polish portfolio, prepare for interviews, apply to 10+ internships (Fusemachines, NAAMII, Cedar Gate, Palm Mind etc.).  
+<!-- Milestones -->
+<h2>Milestones</h2>
+
+<p>
+  Instead of a strict week-by-week plan, these milestones reflect how the journey has actually progressed in phases.
+</p>
+
+<h3>Phase 0: Prerequisite Revision</h3>
+<ul>
+  <li>Revised Python fundamentals, NumPy, pandas, visualization, and ML basics.</li>
+  <li>Practiced with the Iris dataset and other small exercises.</li>
+</ul>
+
+<h3>Phase 1: Classic ML Projects</h3>
+<ul>
+  <li>Completed:
+    <ul>
+      <li>Titanic Survival Prediction (classification).</li>
+      <li>Boston Housing Price Prediction (regression).</li>
+      <li>Wine Quality Prediction (multiclass classification).</li>
+    </ul>
+  </li>
+  <li>Focused on EDA, preprocessing, modeling, and building reproducible pipelines.</li>
+</ul>
+
+<h3>Phase 2: Deep Learning and End-to-End System</h3>
+<ul>
+  <li>Completed the Crop Disease Detection project using CNNs and transfer learning.</li>
+  <li>Extended the work into a FastAPI + React + Docker stack hosted on the cloud.</li>
+  <li>First full taste of an “AI system,” not just a notebook.</li>
+</ul>
+
+<h3>Phase 3: LLMs, RAG, and AI Applications (Ongoing)</h3>
+<ul>
+  <li>Currently developing BainiAI, a LangChain + Gemini based chatbot with:
+    <ul>
+      <li>A RAG pipeline over documents.</li>
+      <li>Conversational memory.</li>
+      <li>Appointment booking via conversational forms.</li>
+      <li>Excel-based storage for appointments.</li>
+      <li>FastAPI backend and React frontend, both containerized.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Phase 4: Portfolio, Refinement, and Applications (Planned)</h3>
+<ul>
+  <li>Polish documentation and READMEs across all projects.</li>
+  <li>Improve deployments and explore basic CI/CD.</li>
+  <li>Create a clean portfolio website to showcase these projects.</li>
+  <li>Apply to internships and roles at companies like Fusemachines, NAAMII, Cedar Gate, Paaila Technology, and others.</li>
+</ul>
 
 ---
 
