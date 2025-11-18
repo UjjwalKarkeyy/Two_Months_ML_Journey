@@ -39,7 +39,7 @@ I’m starting by revisiting foundational skills to ensure I’m ready for proje
 - Document findings in a notebook to kickstart my portfolio.  
 
 ### Resources
-- Kaggle, YouTube, Google, Scikit-Learn.  
+- Kaggle, YouTube, Google, Scikit-Learn, LLMs (like ChatGPT).  
 
 ---
 
@@ -121,7 +121,7 @@ I’m starting by revisiting foundational skills to ensure I’m ready for proje
 <p><strong>Status:</strong> 🟢 Completed<br>
 <strong>Folder:</strong> <code>P4-Crop_Disease_Pred/</code><br>
 <strong>Dataset:</strong> PlantVillage (Kaggle, ~50,000 images)<br>
-<strong>Objective:</strong> Classify crop images (e.g., rice, maize) as healthy or diseased to support farmers and agriculture.</p>
+<strong>Objective:</strong> Classify crop images (e.g., potato, tomato, & pepper) as healthy or diseased to support farmers and agriculture.</p>
 
 <h4>What I worked on</h4>
 <ul>
@@ -130,7 +130,7 @@ I’m starting by revisiting foundational skills to ensure I’m ready for proje
   <li>Applied data augmentation to improve generalization.</li>
   <li>Exported trained models and weights for inference.</li>
   <li>In a separate repository, built a <strong>FastAPI backend</strong> to serve predictions and a <strong>React frontend</strong> for users to upload images.</li>
-  <li>Containerized the system using Docker and deployed it on the cloud.</li>
+  <li>Containerized the system using Docker and deployed it on the cloud (AWS EC2 Instance).</li>
 </ul>
 
 <h4>AI engineering angle</h4>
@@ -140,7 +140,7 @@ I’m starting by revisiting foundational skills to ensure I’m ready for proje
 </ul>
 
 <p><strong>Know more about this project:</strong><br>
-<a href="https://github.com/UjjwalKarkeyy/Crop_Disease_Prediction_Deploy">Add external repository link here</a>
+<a href="https://github.com/UjjwalKarkeyy/Crop_Disease_Prediction_Deploy">Crop Disease Dedicated Repo</a>
 </p>
 
 <hr>
@@ -175,11 +175,10 @@ I’m starting by revisiting foundational skills to ensure I’m ready for proje
 </ul>
 
 <p><strong>Know more about this project:</strong><br>
-<a href="https://github.com/UjjwalKarkeyy/bainiAI_Chatbot_Full">Add external repository link here</a>
+<a href="https://github.com/UjjwalKarkeyy/bainiAI_Chatbot_Full">Chatbot (bainiAI) Dedicated Repo</a>
 </p>
 
 <hr>
----
 
 ## Skills Progress
 
@@ -192,7 +191,7 @@ I’m starting by revisiting foundational skills to ensure I’m ready for proje
 ### Skills After this Journey
 - Advanced EDA (correlation analysis, handling imbalanced data).  
 - Neural Networks (CNNs).  
-- Deployment (Streamlit, Flask).  
+- Deployment (FastAPI, AWS Cloud, and more).  
 
 ---
 
@@ -228,7 +227,7 @@ I’m starting by revisiting foundational skills to ensure I’m ready for proje
   <li>First full taste of an “AI system,” not just a notebook.</li>
 </ul>
 
-<h3>Phase 3: LLMs, RAG, and AI Applications (Ongoing)</h3>
+<h3>Phase 3: LLMs, RAG, and AI Applications</h3>
 <ul>
   <li>Currently developing BainiAI, a LangChain + Gemini based chatbot with:
     <ul>
@@ -237,13 +236,13 @@ I’m starting by revisiting foundational skills to ensure I’m ready for proje
       <li>Appointment booking via conversational forms.</li>
       <li>Excel-based storage for appointments.</li>
       <li>FastAPI backend and React frontend, both containerized.</li>
+      <li>Polish documentation and READMEs across all projects.</li>
     </ul>
   </li>
 </ul>
 
 <h3>Phase 4: Portfolio, Refinement, and Applications (Planned)</h3>
 <ul>
-  <li>Polish documentation and READMEs across all projects.</li>
   <li>Improve deployments and explore basic CI/CD.</li>
   <li>Create a clean portfolio website to showcase these projects.</li>
   <li>Apply to internships and roles at companies like Fusemachines, NAAMII, Cedar Gate, Paaila Technology, and others.</li>
